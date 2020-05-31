@@ -120,19 +120,24 @@ f3 = f1*f2
 ttabl  = 2.306
 print("f3 = f1*f2, з таблиці tтабл = 2.306")
 #print(t0,t1,t2,t3)
+countInsignificant = 0     # кількість не значимих коефіцієнтів
 if (t0<ttabl):
     print("t0<ttabl, b0 не значимий")
     b0=0
+    countInsignificant += 1
 if (t1<ttabl):
     print("t1<ttabl, b1 не значимий")
     b1=0
+    countInsignificant += 1
 if (t2<ttabl):
     print("t2<ttabl, b2 не значимий")
     b2=0
+    countInsignificant += 1
 if (t3<ttabl):
     print("t3<ttabl, b3 не значимий")
     b3=0
-
+    countInsignificant += 1
+print("Кількість не значимих коефіцієнтів = ",countInsignificant)  # вивід кількості не значимих коефіцієнтів
 yy1 = b0 + b1*x1min + b2*x2min + b3*x3min
 yy2 = b0 + b1*x1min + b2*x2max + b3*x3max
 yy3 = b0 + b1*x1max + b2*x2min + b3*x3max
